@@ -23,11 +23,12 @@ public class GameMinDTO {
 	}
 
 	public GameMinDTO(GameMinProjection projection) {
-		id = projection.getId();
+		/*id = projection.getId();
 		title = projection.getTitle();
 		year = projection.getGameYear();
 		imgUrl = projection.getImgUrl();
-		shortDescription = projection.getShortDescription();
+		shortDescription = projection.getShortDescription();*/
+		BeanUtils.copyProperties(projection, this);
 	}
 
 	public Long getId() {
